@@ -29,6 +29,7 @@ require_once($CFG->libdir . '/behat/lib.php');
 $bodyattributes = $OUTPUT->body_attributes();
 
 $templatecontext = [
+    'output' => $OUTPUT,
     'bodyattributes' => $bodyattributes
 ];
 

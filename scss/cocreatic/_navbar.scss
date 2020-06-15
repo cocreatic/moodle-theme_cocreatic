@@ -26,6 +26,7 @@ nav.navbar {
 
         .nav-link {
             background-color: transparent;
+            padding: .3rem 1rem;
         }
     }
 
@@ -122,7 +123,7 @@ nav.navbar {
 
         .popover-region {
             margin-right: 0;
-            line-height: $navbar-height;
+            line-height: calc($navbar-height - 20px);
 
             .popover-region-container {
                 @extend .scale-up;
@@ -380,8 +381,10 @@ nav.navbar {
 
 .custom-menus {
     justify-content: center;
+    display: flex;
     flex-wrap: wrap;
     align-items: center;
+    padding-left: 0;
 
     .nav-item {
         list-style: none;

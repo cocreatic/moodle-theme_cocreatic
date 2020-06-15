@@ -60,11 +60,11 @@
         <div class="content-area">
             <div class="{{#haspostblocks}}col-md-8{{/haspostblocks}}">
 
+                {{{ output.main_content }}}
+
                 {{#hasnews}}
                     {{>theme_cocreatic/news}}
                 {{/hasnews}}
-
-                {{{ output.main_content }}}
 
                 {{#haslogos}}
                     {{>theme_cocreatic/logos}}

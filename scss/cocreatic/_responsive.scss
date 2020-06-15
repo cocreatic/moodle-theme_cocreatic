@@ -248,3 +248,38 @@
     }
   }
 }
+
+@media (max-width: 450px) {
+
+    .custom-menus .nav-item .nav-link {
+        padding: 0 10px;
+        border-radius: 0;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .custom-menus-box .dropdown button {
+        display: block;
+        background-color: transparent;
+        padding: 0 5px;
+    }
+
+    nav.navbar ul.navbar-nav .custom-menus-box .nav-item>a {
+        color: #212529;
+    }
+
+    .custom-menus {
+        display: none;
+    }
+
+    .custom-menus-box .dropdown-menu.show {
+        display: block;
+    }
+}
+
+@media (min-width: 451px) {
+    .custom-menus-box > .dropdown {
+        display: none;
+    }
+}

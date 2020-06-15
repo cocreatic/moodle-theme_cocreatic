@@ -28,6 +28,7 @@ $extraclasses[] = 'cocreatic-login';
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
 
 $templatecontext = [
+    'output' => $OUTPUT,
     'bodyattributes' => $bodyattributes
 ];
 

@@ -27,6 +27,7 @@ defined('MOODLE_INTERNAL') || die();
 $bodyattributes = $OUTPUT->body_attributes();
 
 $templatecontext = [
+    'output' => $OUTPUT,
     'bodyattributes' => $bodyattributes
 ];
 

@@ -49,6 +49,7 @@ function theme_cocreatic_set_bgsimg($theme) {
 
     $bgimg = $theme->setting_file_url('pagebgimg', 'pagebgimg');
     $bgimg2 = $theme->setting_file_url('secondbgimg', 'secondbgimg');
+    $loginbgimg = $theme->setting_file_url('loginbgimg', 'loginbgimg');
 
     $headercss = ':root {';
     if (!is_null($bgimg)) {
@@ -57,6 +58,10 @@ function theme_cocreatic_set_bgsimg($theme) {
 
     if (!is_null($bgimg2)) {
         $headercss .= " --second-bg-url: url('$bgimg2');";
+    }
+
+    if (!is_null($loginbgimg)) {
+        $headercss .= " --login-bg-url: url('$loginbgimg');";
     }
 
     $headercss .= '}';
@@ -137,6 +142,8 @@ function theme_cocreatic_pluginfile($course, $cm, $context, $filearea, $args, $f
         return $theme->setting_file_serve('pagebgimg', $args, $forcedownload, $options);
     } else if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'secondbgimg') {
         return $theme->setting_file_serve('secondbgimg', $args, $forcedownload, $options);
+    } else if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'loginbgimg') {
+        return $theme->setting_file_serve('loginbgimg', $args, $forcedownload, $options);
     } else if ($context->contextlevel == CONTEXT_SYSTEM and preg_match("/^sliderimage[1-9][0-9]?$/", $filearea) !== false) {
         return $theme->setting_file_serve($filearea, $args, $forcedownload, $options);
     } else if ($context->contextlevel == CONTEXT_SYSTEM and preg_match("/^newsimage[1-9][0-9]?$/", $filearea) !== false) {

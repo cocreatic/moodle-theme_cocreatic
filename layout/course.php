@@ -62,6 +62,7 @@ $globalvars->courseid = $PAGE->course->id;
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
 $regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
 $templatecontext = [
+    'output' => $OUTPUT,
     'sidepreblocks' => $blockshtml,
     'sidepostblocks' => $postblockshtml,
     'hasblocks' => $hasblocks,

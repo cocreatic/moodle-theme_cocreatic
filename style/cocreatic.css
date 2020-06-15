@@ -63,10 +63,6 @@ nav.navbar ul.navbar-nav .usermenu {
     align-items: center;
 }
 
-#nav-drawer {
-    padding-top: 40px;
-}
-
 #page-site-index .carousel-caption h2 {
     color: #fff;
     font-size: 25px;
@@ -95,7 +91,7 @@ nav.navbar ul.navbar-nav .usermenu {
 
 #box-news .one-news {
     width: 200px;
-    margin: 0 10px;
+    margin: 0 10px 10px;
 }
 
 #frontpage-available-course-list {
@@ -1096,6 +1092,103 @@ nav.navbar ul.navbar-nav .usermenu {
 
 .regular-padding {
     padding: 15px;
+}
+
+.courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.courses .coursebox {
+    width: 180px;
+    margin: 0 10px 10px;
+    color: #404674;
+    overflow: hidden;
+    background-color: #f7f9fa;
+    -webkit-box-shadow: 4px 4px 4px #bbb;
+    box-shadow: 4px 4px 4px #bbb;
+    border-radius: 20px;
+    padding: 0 0 40px;
+    position: relative;
+}
+
+.courses .coursebox.even {
+    background-color: #f7f9fa;
+}
+
+.courses .courseimage {
+    height: 160px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.courses .courseimage img {
+    height: 160px;
+}
+
+.courses .panel-body {
+    overflow: auto;
+    padding: 5px;
+    text-align: center;
+}
+
+.courses .panel-body a {
+    color: #4c6295;
+    font-weight: bold;
+}
+
+.courses .panel-foot {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 5px;
+}
+
+.courses .panel-foot .coursebtn {
+    background-color: #587fe3;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.courses .panel-foot .coursebtn:hover {
+    background-color: #4c6295;
+}
+
+img.userpicture {
+    margin-right: 0;
+}
+
+.nav.navbar-nav .dropdown-toggle::after {
+    color: #fff;
+    margin-left: 0;
+}
+
+.navbar {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar-light .navbar-nav .nav-link i {
+    color: #fff;
+}
+
+nav.navbar ul.navbar-nav .lang-menu,
+nav.navbar ul.navbar-nav .lang-menu .nav-item .nav-link {
+    padding: 0;
+}
+
+nav.navbar ul.navbar-nav .popover-region .popover-region-toggle {
+    padding: 0 10px;
+}
+
+.courses>.paging.paging-morelink {
+    width: 100%;
 }
 
 /********************************************************************************/

@@ -74,6 +74,15 @@ if (is_siteadmin()) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Login page background image.
+    $name = 'theme_cocreatic/loginbgimg';
+    $title = get_string('loginbgimg', 'theme_cocreatic');
+    $description = get_string('loginbgimg_desc', 'theme_cocreatic');
+    $opts = array('accepted_types' => array('.png', '.jpg', '.svg'));
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'loginbgimg', 0, $opts);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Variable $brand-color.
     // We use an empty default value because the default colour should come from the preset.
     $name = 'theme_cocreatic/brandcolor';

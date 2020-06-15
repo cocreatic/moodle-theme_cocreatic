@@ -1,23 +1,18 @@
 <section id="box-logos">
     <h2>{{#str}}logostitle, theme_cocreatic{{/str}}</h2>
 
-    <div class="horizontalslider flexslider" data-autoplay="true" data-loop="true" data-width="200">
-        <ul class="slides">
-        {{#logos}}
-            <li class="one-logo">
-                {{#image}}
-                    {{#url}}<a href="{{{ url }}}" target="_blank">{{/url}}
-                    <img src="{{{ image }}}" title="{{ content }}" />
-                    {{#url}}</a>{{/url}}
-                {{/image}}
-
-                {{^image}}
-                    {{#url}}<a href="{{{ url }}}" target="_blank">{{/url}}
-                            {{{ content }}}
-                    {{#url}}</a>{{/url}}
-                {{/image}}
-            </li>
-        {{/logos}}
-        </ul>
-    </div>
+    <ul>
+    {{#logos}}
+        <li class="one-logo">
+            {{#url}}<a href="{{{ url }}}" target="_blank">{{/url}}
+            {{#image}}
+                <img src="{{{ image }}}" title="{{ content }}" />
+            {{/image}}
+            {{^image}}
+                {{{ content }}}
+            {{/image}}
+            {{#url}}</a>{{/url}}
+        </li>
+    {{/logos}}
+    </ul>
 </section>

@@ -64,8 +64,8 @@
 
         {{{ output.full_header }}}
 
-        <div id="page-content" class="row">
-            <div id="region-main-box" class="col-xs-12">
+        <div id="page-content">
+            <div id="region-main-box">
                 {{#hasregionmainsettingsmenu}}
                 <div id="region-main-settings-menu" class="hidden-print">
                     <div> {{{ output.region_main_settings_menu }}} </div>
@@ -75,16 +75,21 @@
                     {{#hasregionmainsettingsmenu}}
                     <div class="region_main_settings_menu_proxy"></div>
                     {{/hasregionmainsettingsmenu}}
+
+                    {{#hasstats}}
+                        {{>theme_cocreatic/stats}}
+                    {{/hasstats}}
+
                     <div class="content-area">
                         <div class="{{#haspostblocks}}col-md-8{{/haspostblocks}}">
-
-                            {{#hasnews}}
-                                {{>theme_cocreatic/news}}
-                            {{/hasnews}}
 
                             {{{ output.course_content_header }}}
                             {{{ output.main_content }}}
                             {{{ output.course_content_footer }}}
+
+                            {{#hasnews}}
+                                {{>theme_cocreatic/news}}
+                            {{/hasnews}}
 
                             {{#haslogos}}
                                 {{>theme_cocreatic/logos}}

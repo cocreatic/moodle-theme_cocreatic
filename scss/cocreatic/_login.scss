@@ -1,5 +1,6 @@
 #page-login-index.cocreatic-login {
     margin-left: 0;
+    background: #7591e1 var(--login-bg-url) no-repeat left center;
 
     #maincontent {
         height: 0;
@@ -63,8 +64,7 @@
 
                 i,
                 .text-info,
-                .highlight,
-                a {
+                .highlight {
                     color: #fff !important;
                 }
 
@@ -122,7 +122,7 @@
             }
 
             .instructions {
-                padding: 60px 15px;
+                padding: 0 15px;
                 color: #fff;
                 min-height: $m-login-boxheight;
                 align-content: center;

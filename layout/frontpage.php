@@ -57,6 +57,7 @@ if (isloggedin() && !isguestuser()) {
     $bodyattributes = $OUTPUT->body_attributes($extraclasses);
     $regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
     $templatecontext = [
+        'output' => $OUTPUT,
         'sidepreblocks' => $blockshtml,
         'hasblocks' => $hasblocks,
         'bodyattributes' => $bodyattributes,
@@ -89,6 +90,7 @@ if (isloggedin() && !isguestuser()) {
     $regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
 
     $templatecontext = [
+        'output' => $OUTPUT,
         'bodyattributes' => $bodyattributes,
         'cansignup' => $CFG->registerauth == 'email' || !empty($CFG->registerauth),
         'sidepostblocks' => $blocksposthtml,

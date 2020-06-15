@@ -22,14 +22,17 @@
     Example context (json): {}
 }}
 <div id="top-footer">
-    <div class="container-fluid">
-        <div class="footer_content">
-            {{{ footercontent }}}
-        </div>
-        <div class="footer_about">
-            {{{ footerinfo }}}
-        </div>
+    {{#footercontent}}
+    <div class="footer_content">
+        {{{ footercontent }}}
     </div>
+    {{/footercontent}}
+
+    {{#footerinfo}}
+    <div class="footer_about">
+        {{{ footerinfo }}}
+    </div>
+    {{/footerinfo}}
 </div>
 
 {{^disablebottomfooter}}

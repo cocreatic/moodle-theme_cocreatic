@@ -28,7 +28,7 @@
         </div>
     {{/hasdrawertoggle}}
 
-    <a href="{{{ config.wwwroot }}}" class="navbar-brand {{# output.get_logo }}has-logo{{/ output.get_logo }}
+    <!--a href="{{{ config.wwwroot }}}" class="navbar-brand {{# output.get_logo }}has-logo{{/ output.get_logo }}
         {{^ output.get_logo }}
             d-none d-sm-inline
         {{/ output.get_logo }}
@@ -41,14 +41,17 @@
         {{^ output.get_logo }}
             <span class="site-name d-none d-md-inline">{{{ sitename }}}</span>
         {{/ output.get_logo }}
-    </a>
+    </a-->
 
     <ul class="nav navbar-nav ml-auto">
+
+        {{>theme_cocreatic/mainmenu}}
+
         <ul class="navbar-nav d-none d-md-flex">
             <!-- page_heading_menu -->
             {{{ output.page_heading_menu }}}
         </ul>
-        <div class="d-none d-lg-block">
+        <div class="d-lg-block">
             {{{ output.search_box }}}
         </div>
 
@@ -56,15 +59,13 @@
             {{{ output.render_lang_menu }}}
         </div>
 
+        {{#socialnet}}
         <div class="socialnetworks">
-            {{#socialnet}}
-                <span class="nav-item">
-                    {{{.}}}
-                </span>
-            {{/socialnet}}
+            <span class="nav-item">
+                {{{.}}}
+            </span>
         </div>
-
-        {{>theme_cocreatic/mainmenu}}
+        {{/socialnet}}
 
         {{{ output.navbar_plugin_output }}}
 
