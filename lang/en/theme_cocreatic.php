@@ -38,6 +38,7 @@ $string['diskusage'] = 'Disk usage(moodledata)';
 $string['totalusers'] = 'Active / Suspended users';
 $string['totalcourses'] = 'Total courses';
 $string['onlineusers'] = 'Online users(last 5 minutes)';
+$string['gotocourse'] = 'Ir al curso';
 
 // General settings page.
 $string['generalsettings'] = 'General';

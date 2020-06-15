@@ -97,7 +97,7 @@ class course_renderer extends \core_course_renderer {
             $icondirection = 'right';
         }
         $arrow = html_writer::tag('span', '', array('class' => 'fa fa-chevron-'.$icondirection));
-        $btn = html_writer::tag('span', get_string('course', 'theme_adaptable') . ' ' .
+        $btn = html_writer::tag('span', get_string('gotocourse', 'theme_cocreatic') . ' ' .
                 $arrow, array('class' => 'get_stringlink'));
 
         if (empty($PAGE->theme->settings->covhidebutton)) {
