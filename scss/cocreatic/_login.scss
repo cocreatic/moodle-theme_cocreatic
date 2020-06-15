@@ -1,6 +1,7 @@
 #page-login-index.cocreatic-login {
     margin-left: 0;
-    background: #7591e1 var(--login-bg-url) no-repeat left center;
+    background: var(--login-bg-url) no-repeat left center;
+    background-color: $headings-color;
 
     #maincontent {
         height: 0;
