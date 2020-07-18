@@ -100,9 +100,18 @@ class course_renderer extends \core_course_renderer {
         $btn = html_writer::tag('span', get_string('gotocourse', 'theme_cocreatic') . ' ' .
                 $arrow, array('class' => 'get_stringlink'));
 
-        if (empty($PAGE->theme->settings->covhidebutton)) {
+        if ($PAGE->pagelayout != 'incourse' && empty($PAGE->theme->settings->covhidebutton)) {
             $content .= html_writer::link(new moodle_url('/course/view.php',
                     array('id' => $course->id)), $btn, array('class' => " coursebtn submit btn btn-info btn-sm"));
+        }
+
+        if ($PAGE->pagetype == 'enrol-index') {
+            if ($course->has_summary()) {
+                $content .= html_writer::start_tag('p', array('class' => 'card-text'));
+                $content .= $chelper->get_course_formatted_summary($course,
+                    array('overflowdiv' => true, 'noclean' => true, 'para' => false));
+                $content .= html_writer::end_tag('p'); // End summary.
+            }
         }
 
         $content .= html_writer::end_tag('div'); // End .panel-foot.

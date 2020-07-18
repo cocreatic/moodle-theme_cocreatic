@@ -22,6 +22,24 @@
  *
  */
 
+:root{
+  --color-cont-first: #818587;
+  --color-bg-first: #FFFFFF;
+  --color-alt-first: #818587;
+  --color-cont-sec: #4d6fb8;
+  --color-bg-sec: #FFFFFF;
+  --color-alt-sec: #a4b7dc;
+  --color-cont-third: #6F7274;
+  --color-bg-third: #ECF2FF;
+  --color-alt-third: #a4b7dc;
+
+  --font-size-sec: 13px;
+}
+
+body {
+    color: var(--color-cont-first);
+}
+
 nav.navbar .navbar-brand .logo img {
     position: absolute;
     top: 0;
@@ -821,136 +839,6 @@ nav.navbar ul.navbar-nav .usermenu {
     color: #fff;
 }
 
-.contenido-metodologia > div {
-    margin-bottom: 20px;
-    background-color: #f3f4f6;
-    display: flex;
-    justify-content: space-between;
-}
-
-.contenido-metodologia > .eva-block-title1,
-.contenido-metodologia > .eva-block-title2 {
-    display: block;
-}
-
-.contenido-metodologia > .eva-block-title2 {
-    background-color: #47657c;
-    position: relative;
-    margin-bottom: 0;
-}
-
-.contenido-metodologia > .eva-block-title2 img {
-    position: absolute;
-    bottom: 0;
-}
-
-.contenido-metodologia .eva-subtitle {
-    padding: 15px;
-    color: #3a4f5a;
-    font-size: 20px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    background-color: rgba(243, 244, 246, 0.8);
-}
-
-.contenido-metodologia h5 {
-    color: #293a47;
-    text-decoration: none;
-    margin: 0;
-    font-size: 20px;
-}
-
-.contenido-metodologia .eva-special-dates {
-    margin-left: 10px;
-}
-
-.metodologia-objetivo {
-    height: 170px;
-}
-
-.metodologia-objetivo h5 {
-    margin-bottom: 10px;
-}
-
-.metodologia-objetivo > div:first-child {
-    padding: 20px 0 0 20px;
-    width: 50%;
-}
-
-.metodologia-objetivo img {
-    max-width: 100%;
-}
-
-.metodologia-plantea {
-    height: 170px;
-}
-
-.metodologia-plantea img {
-    height: 150px;
-    max-width: 200px;
-}
-
-.metodologia-plantea .eva-subtitle {
-    border-right: 5px solid #fff;
-    flex: 0 0 210px;
-}
-
-.metodologia-sliders {
-    display: flex;
-    max-width: 700px;
-}
-
-.metodologia-sliders .slide {
-    position: relative;
-    display: flex;
-    padding: 10px 40px 10px 10px;
-}
-
-.metodologia-sliders .slide p {
-    overflow: auto;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.metodologia-sliders .slide1 {
-    flex-direction: row-reverse;
-}
-
-.metodologia-secciones {
-    justify-content: space-between;
-    background-color: transparent !important;
-}
-
-.metodologia-secciones > div {
-    padding: 15px;
-    background-color: #f3f4f6;
-}
-
-.metodologia-secciones.rx2 > div {
-    width: 46%;
-}
-
-.metodologia-secciones.rx3 > div {
-    width: 32%;
-}
-
-.metodologia-secciones.rx4 > div {
-    width: 22%;
-}
-
-.metodologia-secciones.rx5 > div {
-    width: 18%;
-}
-
-.metodologia-secciones h5 {
-    text-align: center;
-    font-size: 17px;
-    margin-bottom: 20px;
-}
-
-
 .eva-special-dates {
     background-color: #293a47;
     display: flex;
@@ -1011,7 +899,6 @@ nav.navbar ul.navbar-nav .usermenu {
 .pagelayout-popup #page {
     margin: 0;
 }
-
 
 .instructions {
     display: block !important;
@@ -1101,8 +988,7 @@ nav.navbar ul.navbar-nav .usermenu {
     padding-top: 20px;
 }
 
-.courses .coursebox {
-    width: 180px;
+.coursebox {
     margin: 0 10px 10px;
     color: #404674;
     overflow: hidden;
@@ -1112,6 +998,10 @@ nav.navbar ul.navbar-nav .usermenu {
     border-radius: 20px;
     padding: 0 0 40px;
     position: relative;
+}
+
+.courses .coursebox {
+    width: 180px;
 }
 
 .courses .coursebox.even {
@@ -1189,6 +1079,340 @@ nav.navbar ul.navbar-nav .popover-region .popover-region-toggle {
 
 .courses>.paging.paging-morelink {
     width: 100%;
+}
+
+.pagelayout-incourse .coursebox .panel-body a {
+    color: #4c6295;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.pagelayout-incourse .coursebox .courseimage img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.pagelayout-incourse .coursebox .panel-body,
+.pagelayout-incourse .coursebox .panel-foot {
+    padding: 10px 20px;
+}
+
+#content-blocks {
+    padding: 10px;
+}
+
+#page-site-index #block-region-side-cont .card-body h5 {
+    color: #7591e1;
+    font-weight: 700;
+    position: relative;
+    text-align: center;
+    font-size: 1.875rem;
+    text-align: center;
+    display: block !important;
+}
+
+#page-site-index #block-region-side-cont {
+    background-color: #f3f4f4;
+}
+
+/********************************************************************************/
+/* To course detail
+*********************************************************************************/
+.course-detail strong {
+    color: var(--color-cont-third);
+}
+
+.content-detail {
+    max-width: 900px;
+    margin: auto;
+}
+
+.content-detail .content-box {
+    padding: 10px 20px;
+}
+
+.content-detail .media-container {
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+}
+
+.content-detail .media-container > div {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-detail .media-container video,
+.content-detail .media-container img,
+.content-detail .media-container audio {
+    max-width: 100%;
+}
+
+.duration-title {
+    margin-bottom: 20px;
+}
+
+.duration-title h3 {
+    color: var(--color-cont-sec);
+    font-weight: 600;
+    font-size: 16px;
+    margin: 15px 0 0;
+}
+
+.duration-title span {
+    color: var(--color-cont-first);
+    font-weight: 400;
+    font-size: var(--font-size-sec);
+    padding-left: 20px;
+}
+
+.share-container {
+    margin: 20px 0;
+    justify-items: center;
+    align-items:center;
+    border-top: 1px solid var(--color-cont-sec);
+    border-bottom: 1px solid var(--color-cont-sec);
+    padding: 20px 0;
+}
+
+.share-container .share-content {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 0 20px;
+}
+
+.share-container .input-container {
+    width: 100%;
+}
+
+.share-container input[name="courselink"] {
+    border: 1px solid var(--color-cont-sec);
+    border-radius: 0 5px 5px 0;
+    font-style: italic;
+    font-size: var(--font-size-sec);
+}
+
+.share-container .input-group-text {
+    border-color: var(--color-cont-sec);
+    border-radius: 5px 0 0 5px;
+    border-right: none;
+}
+
+.share-container .share-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.share-container .share-icons a {
+    border: 2px solid var(--color-cont-sec);
+    border-radius: 50%;
+    color: var(--color-cont-sec);
+    display: flex;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    font-size: 22px;
+}
+
+.share-container .share-icons a i {
+    color: var(--color-cont-sec);
+}
+
+.content-table p {
+    font-size: var(--font-size-sec);
+}
+
+.content-table .card {
+    border-color: var(--color-bg-third);
+    margin-bottom: 2px;
+    box-shadow: none;
+}
+
+.content-table .card-header {
+    background-color: var(--color-bg-third);
+    color: var(--color-cont-third);
+    padding: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.content-table .card-header button {
+    color: var(--color-cont-third);
+    font-weight: 500;
+    border-bottom: none;
+}
+
+.coursebanner-box {
+    position: relative;
+}
+
+.coursebanner-box img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.coursebanner-box .coursetitle {
+    position: absolute;
+    top: 23%;
+    left: 8%;
+    background-color: #284a7188;
+    padding: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    font-size: 17px;
+    min-width: 30%;
+    min-height: 50%;
+}
+
+.what-to-learn > ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, auto));
+    list-style: none;
+}
+
+.what-to-learn > ul > li {
+    padding: 0 20px 20px 40px;
+    position: relative;
+}
+
+.what-to-learn > ul > li:before {
+    content: "";
+    background: url(http://localhost/moodle37/theme/cocreatic/pix/check.png) no-repeat center center;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+}
+
+.enroll-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-bg-third);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.course-detail .enroll-content {
+    color: var(--color-cont-sec);
+    margin-bottom: 0;
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.course-detail .enroll-content img.icon {
+    width: auto;
+    height: auto;
+}
+
+.course-detail .enroll-content em {
+    font-size: 20px;
+}
+
+.course-detail .enroll-container a.btn {
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.course-detail .detail-foot {
+    border-top: 1px solid var(--color-cont-sec);
+    padding-top: 20px;
+    margin-top: 30px;
+}
+
+.course-detail .detail-foot .license {
+    text-align: center;
+}
+
+.course-detail .detail-foot .license img {
+    border-width: 0;
+}
+
+@media (max-width: 600px) {
+
+    .coursebanner-box .coursetitle {
+        font-size: 14px;
+        max-width: 90%;
+        max-height: 90%;
+        top: 5%;
+        left: 5%;
+        overflow: auto;
+    }
+
+    .content-detail .media-container {
+        display: block;
+    }
+
+    .content-detail .media-container > div {
+        width: auto;
+    }
+
+    .what-to-learn > ul {
+        display: block;
+    }
+
+    .share-container .share-content {
+        display: block;
+    }
+
+    .share-container .share-icons {
+        padding: 20px 10px;
+    }
+}
+
+/********************************************************************************/
+/* Tepuy acoordion
+*********************************************************************************/
+.tepuy-accordion > div.closed {
+    margin-bottom: 10px;
+}
+
+.tepuy-accordion > div > h3 {
+    background-color: var(--color-bg-third);
+    color: var(--color-cont-third);
+    padding: 10px 10px 10px 50px;
+    position: relative;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+    border-radius: 3px;
+    box-shadow: 0 0 4px var(--color-alt-third);
+    cursor: pointer;
+}
+
+.tepuy-accordion > div > h3:hover {
+    opacity: 0.7;
+}
+
+.tepuy-accordion > div > h3:before {
+    content: "+";
+    position: absolute;
+    left: 10px;
+    color: var(--color-cont-sec);
+}
+
+.tepuy-accordion > div.opened > h3:before {
+    content: "-";
+}
+
+.tepuy-accordion > div > div {
+    border: 1px solid var(--color-alt-sec);
+    border-radius: 3px;
+    padding: 10px 20px;
+    display: none;
+    margin-bottom: 3px;
 }
 
 /********************************************************************************/
@@ -1284,38 +1508,5 @@ nav.navbar ul.navbar-nav .popover-region .popover-region-toggle {
          flex-wrap: wrap;
     }
 
-    .metodologia-objetivo,
-    .metodologia-plantea {
-        height: unset;
-    }
-
-    .metodologia-plantea .eva-subtitle {
-        border-bottom: 5px solid #fff;
-        flex: 100%;
-    }
-
-    .metodologia-secciones {
-        display: unset !important;
-    }
-
-    .metodologia-secciones.rx2 > div,
-    .metodologia-secciones.rx3 > div,
-    .metodologia-secciones.rx4 > div,
-    .metodologia-secciones.rx5 > div {
-        width: 100%;
-        margin-bottom: 5px;
-    }
-
-    .metodologia-sliders .slide {
-        display: unset;
-    }
-
-    .contenido-metodologia > .eva-block-title2 {
-        padding-right: 95px;
-    }
-
-    .contenido-metodologia > .eva-block-title2 img {
-        right: 0;
-    }
  }
 

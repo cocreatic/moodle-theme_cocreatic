@@ -6,21 +6,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    color: #000;
-}
-
-body#page-enrol-index {
-    #region-main {
-        .generalbox {
-            float: left;
-            width: 30%;
-        }
-        .generalbox:last-of-type {
-            width: 70%;
-            padding-left: 2rem;
-            padding-right: 2rem;
-        }
-    }
 }
 
 body.pagelayout-popup {

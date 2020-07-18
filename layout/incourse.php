@@ -80,9 +80,8 @@ $themesettings = new \theme_cocreatic\util\theme_settings();
 
 $templatecontext = array_merge($templatecontext, $themesettings->generalvars(), $themesettings->footer_items());
 
-$OUTPUT->doctype(); // Call to fix Doctype loading error in some pages with incourse layout.
 if (isset($PAGE->cm->modname) && in_array($PAGE->cm->modname, $moduleswithnavinblocks)) {
     echo $OUTPUT->render_from_template('theme_cocreatic/incourse', $templatecontext);
 } else {
-    echo $OUTPUT->render_from_template('theme_cocreatic/columns2', $templatecontext);
+    echo $OUTPUT->render_from_template('theme_cocreatic/course', $templatecontext);
 }

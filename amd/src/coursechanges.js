@@ -1,3 +1,18 @@
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
 define(['jquery', 'core/modal_factory'], function($, ModalFactory) {
   'use strict';
 
@@ -30,7 +45,7 @@ define(['jquery', 'core/modal_factory'], function($, ModalFactory) {
                 $("html, body").animate({ scrollTop: $node.offset().top }, 500);
             });
 
-            $('.attachedimages').each(function() {
+            $('.attachedimages, .sliderimages').each(function() {
                 var $this = $(this);
                 $this.find('br').remove();
                 $this.find('img').first().addClass('active');
@@ -87,6 +102,40 @@ define(['jquery', 'core/modal_factory'], function($, ModalFactory) {
                 var target = $this.attr('data-target');
 
                 $(target).toggleClass(cssclass);
+            });
+
+
+            $('.tepuy-accordion').each(function() {
+                var $this = $(this);
+
+                $this.find('> div').addClass('closed');
+
+                $this.find('> div > h3').each(function() {
+                    var $header = $(this);
+                    var $parent = $header.parent();
+                    var $body = $parent.find('> div');
+
+                    $header.on('click', function() {
+
+                        var opened = false;
+                        if ($parent.hasClass('opened')) {
+                            opened = true;
+                        }
+
+                        $this.find('> div.opened > div').hide(400);
+                        $this.find('> div.opened').removeClass('opened').addClass('closed');
+
+                        if (opened) {
+                            $parent.removeClass('opened').addClass('closed');
+                            $body.hide(400);
+                        } else {
+                            $parent.removeClass('closed').addClass('opened');
+                            $body.show(400);
+                        }
+                    });
+
+                });
+
             });
 
 
