@@ -1011,7 +1011,8 @@ nav.navbar ul.navbar-nav .usermenu {
 .courses .courseimage {
     height: 160px;
     overflow: hidden;
-    text-align: center;
+    background-size: cover;
+    background-position: center center;
 }
 
 .courses .courseimage img {
@@ -1022,6 +1023,7 @@ nav.navbar ul.navbar-nav .usermenu {
     overflow: auto;
     padding: 5px;
     text-align: center;
+    max-height: 200px;
 }
 
 .courses .panel-body a {
@@ -1084,17 +1086,17 @@ nav.navbar ul.navbar-nav .popover-region .popover-region-toggle {
 .pagelayout-incourse .coursebox .panel-body a {
     color: #4c6295;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .pagelayout-incourse .coursebox .courseimage img {
-    max-width: 100%;
     max-height: 100%;
 }
 
 .pagelayout-incourse .coursebox .panel-body,
 .pagelayout-incourse .coursebox .panel-foot {
     padding: 10px 20px;
+    max-height: 200px;
 }
 
 #content-blocks {
@@ -1136,6 +1138,7 @@ nav.navbar ul.navbar-nav .popover-region .popover-region-toggle {
     margin: 20px auto;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .content-detail .media-container > div {
@@ -1261,7 +1264,7 @@ nav.navbar ul.navbar-nav .popover-region .popover-region-toggle {
     position: absolute;
     top: 23%;
     left: 8%;
-    background-color: #284a7188;
+    background-color: rgba(40, 74, 113, 0.8);
     padding: 15px;
     text-transform: uppercase;
     color: #fff;
@@ -1284,7 +1287,7 @@ nav.navbar ul.navbar-nav .popover-region .popover-region-toggle {
 
 .what-to-learn > ul > li:before {
     content: "";
-    background: url(http://localhost/moodle37/theme/cocreatic/pix/check.png) no-repeat center center;
+    background: url([[pix:theme|check]]) no-repeat center center;
     background-size: contain;
     width: 30px;
     height: 30px;
@@ -1340,36 +1343,42 @@ nav.navbar ul.navbar-nav .popover-region .popover-region-toggle {
     border-width: 0;
 }
 
-@media (max-width: 600px) {
+.catalog-return {
+    border-bottom: 1px solid var(--color-cont-sec);
+}
 
-    .coursebanner-box .coursetitle {
-        font-size: 14px;
-        max-width: 90%;
-        max-height: 90%;
-        top: 5%;
-        left: 5%;
-        overflow: auto;
-    }
+.catalog-return a {
+    background-color: var(--color-bg-third);
+    border: 1px solid var(--color-alt-third);
+    color: var(--color-cont-third);
+}
 
-    .content-detail .media-container {
-        display: block;
-    }
+.catalog-return a:hover {
+    background-color: var(--color-alt-third);
+}
 
-    .content-detail .media-container > div {
-        width: auto;
-    }
+.coursessearch-box {
+    background-color: var(--color-bg-third);
+}
 
-    .what-to-learn > ul {
-        display: block;
-    }
+.coursessearch-box form {
+    background-color: var(--color-bg-sec);
+}
 
-    .share-container .share-content {
-        display: block;
-    }
+.coursessearch-box input {
+    color: var(--color-cont-sec);
+}
 
-    .share-container .share-icons {
-        padding: 20px 10px;
-    }
+.courses-sort li a {
+    color: var(--color-cont-sec);
+}
+
+.courses-sort li a:after {
+    background-color: var(--color-bg-third);
+}
+
+#page-blocks-greatcourses-index .courses {
+    background-color: var(--color-bg-third);
 }
 
 /********************************************************************************/
@@ -1434,8 +1443,39 @@ nav.navbar ul.navbar-nav .popover-region .popover-region-toggle {
 
  }
 
- @media (max-width:512px) {
-     #page-navbar .breadcrumb-nav .breadcrumb {
+
+@media (max-width: 600px) {
+
+    .coursebanner-box .coursetitle {
+        font-size: 14px;
+        max-width: 90%;
+        max-height: 90%;
+        top: 5%;
+        left: 5%;
+        overflow: auto;
+    }
+
+    .content-detail .media-container {
+        display: block;
+    }
+
+    .content-detail .media-container > div {
+        width: auto;
+    }
+
+    .what-to-learn > ul {
+        display: block;
+    }
+
+    .share-container .share-content {
+        display: block;
+    }
+
+    .share-container .share-icons {
+        padding: 20px 10px;
+    }
+
+    #page-navbar .breadcrumb-nav .breadcrumb {
         padding: 0.2em;
         max-height: 80px;
         overflow: auto;

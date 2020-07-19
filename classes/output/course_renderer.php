@@ -146,17 +146,16 @@ class course_renderer extends \core_course_renderer {
                     '/'. $file->get_contextid(). '/'. $file->get_component(). '/'.
                     $file->get_filearea(). $file->get_filepath(). $file->get_filename(), !$isimage);
             if ($isimage) {
-                $contentimages .= html_writer::tag('div',
-                        html_writer::empty_tag('img', array('src' => $url)),
-                        array('class' => 'courseimage'));
+                $contentimages .= html_writer::tag('div', '',
+                        array('class' => 'courseimage', 'style' => 'background-image: url(' . $url . ')'));
+                break;
             }
         }
 
         if (empty($contentimages)) {
             $url = new moodle_url($CFG->wwwroot . '/theme/cocreatic/pix/course.png');
-            $contentimages .= html_writer::tag('div',
-                    html_writer::empty_tag('img', array('src' => $url)),
-                    array('class' => 'courseimage'));
+            $contentimages .= html_writer::tag('div', '',
+                    array('class' => 'courseimage', 'style' => 'background-image: url(' . $url . ')'));
         }
 
         $content .= $contentimages;
