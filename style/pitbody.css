@@ -147,8 +147,8 @@ td {
   color: #4d6fb7;
   font-weight: bold;
   display: inline-block;
-  width: 1.5em;
-  margin-left: -1.5em;
+  width: 1rem;
+  margin-left: -1rem;
 }
 
 .pit_body ol li {
@@ -316,7 +316,7 @@ td {
   right: -2px;
 }
 
-.pit_nota .pit_etiqueta {
+.pit_nota > .pit_etiqueta {
   background-color: #7590e0;
   border-radius: 25px;
   padding: 5px 10px;
@@ -346,16 +346,16 @@ td {
   border-color: transparent;
 }
 
-.pit_nota.important .pit_etiqueta,
-.pit_nota.pit_nota.example .pit_etiqueta,
-.pit_nota.link .pit_etiqueta,
-.pit_nota.activity .pit_etiqueta {
+.pit_nota.important > .pit_etiqueta,
+.pit_nota.pit_nota.example > .pit_etiqueta,
+.pit_nota.link > .pit_etiqueta,
+.pit_nota.activity > .pit_etiqueta {
   top: -20px;
 }
 
 /********* important ********/
 
-.pit_nota.important .pit_etiqueta {
+.pit_nota.important > .pit_etiqueta {
   background-color: #e55049;
   color: #ffffff;
 }
@@ -368,7 +368,7 @@ td {
   background-color: #e55049;
 }
 
-.pit_nota.important .pit_etiqueta:before {
+.pit_nota.important > .pit_etiqueta:before {
   content: "";
   background-size: 400%;
   background-position: 5%;
@@ -377,7 +377,7 @@ td {
 
 /*Box examples */
 
-.pit_nota.example .pit_etiqueta {
+.pit_nota.example > .pit_etiqueta {
   background-color: #00c9cb;
   color: #ffffff;
 }
@@ -390,7 +390,7 @@ td {
   background-color: #00c9cb;
 }
 
-.pit_nota.example .pit_etiqueta:before {
+.pit_nota.example > .pit_etiqueta:before {
   content: "";
   background-size: 400%;
   background-position: 38%;
@@ -398,7 +398,7 @@ td {
 
 /*Enlaces - box_required_link */
 
-.pit_nota.link .pit_etiqueta {
+.pit_nota.link > .pit_etiqueta {
   background-color: #ffa374;
   color: #ffffff;
 }
@@ -411,7 +411,7 @@ td {
   background-color: #ffa374;
 }
 
-.pit_nota.link .pit_etiqueta:before {
+.pit_nota.link > .pit_etiqueta:before {
   content: "";
   background-size: 400%;
   background-position: 68%;
@@ -450,7 +450,7 @@ td {
 
 /********* box activity ********/
 
-.pit_nota.activity .pit_etiqueta {
+.pit_nota.activity > .pit_etiqueta {
   background-color: #8796d7;
   color: #ffffff;
 }
@@ -463,7 +463,7 @@ td {
   background-color: #8796d7;
 }
 
-.pit_nota.activity .pit_etiqueta:before {
+.pit_nota.activity > .pit_etiqueta:before {
   content: "";
   background-size: 400%;
   background-position: 100%;
@@ -473,4 +473,26 @@ td {
   .pit_nota .pit_etiqueta:before {
     display: none;
   }
+}
+
+/******* Créditos ********/
+.pit_creditos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pit_creditos .pit_creditos_item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.pit_creditos .pit_creditos_item span{
+  font-size: 16px;
+}
+.pit_creditos .pit_creditos_item span:first-child{
+  font-weight: bold;
+  padding-right: 10px;
+  justify-self: right;
 }
