@@ -900,6 +900,10 @@ nav.navbar ul.navbar-nav .usermenu {
     margin: 0;
 }
 
+.pagelayout-embedded {
+    margin-left: 0;
+}
+
 .instructions {
     display: block !important;
     font-size: 12px;
