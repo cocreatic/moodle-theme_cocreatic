@@ -1,12 +1,11 @@
 <section id="box-news">
     <!--div class="horizontalslider flexslider" data-width="200"-->
-        <ul class="slides">
+        <div class="slides">
         {{#news}}
-            <li class="one-news">
+            {{#url}}<a href="{{{ url }}}" class="one-news">{{/url}}
+            {{^url}}<span class="one-news">{{/url}}
                 {{#image}}
-                    {{#url}}<a href="{{{ url }}}">{{/url}}
                     <img src="{{{ image }}}" />
-                    {{#url}}</a>{{/url}}
                 {{/image}}
 
                 {{{ content }}}
@@ -20,8 +19,9 @@
                         </div>
                     {{/url}}
                 {{/image}}
-            </li>
+            {{#url}}</a>{{/url}}
+            {{^url}}</span>{{/url}}
         {{/news}}
-        </ul>
+        </div>
     <!--/div-->
 </section>

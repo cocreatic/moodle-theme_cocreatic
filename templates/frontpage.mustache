@@ -56,12 +56,6 @@
             {{>theme_cocreatic/slideshow}}
         {{/hasslides}}
 
-        {{#hascontentblocks}}
-        <section id="content-blocks" data-region="blocks-row">
-            {{{ contentblocks }}}
-        </section>
-        {{/hascontentblocks}}
-
         {{{ output.full_header }}}
 
         <div id="page-content">
@@ -106,6 +100,12 @@
                 </section>
             </div>
         </div>
+
+        {{#hascontentblocks}}
+        <section id="content-blocks" data-region="blocks-row">
+            {{{ contentblocks }}}
+        </section>
+        {{/hascontentblocks}}
     </div>
 
     {{>theme_cocreatic/inc_end}}

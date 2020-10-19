@@ -110,6 +110,7 @@ nav.navbar ul.navbar-nav .usermenu {
 #box-news .one-news {
     width: 200px;
     margin: 0 10px 10px;
+    text-decoration: none;
 }
 
 #frontpage-available-course-list {
