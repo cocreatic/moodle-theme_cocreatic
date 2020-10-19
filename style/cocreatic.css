@@ -44,6 +44,7 @@ nav.navbar .navbar-brand .logo img {
     position: absolute;
     top: 0;
     max-height: 80px;
+    margin: 5px;
 }
 
 nav.navbar ul.navbar-nav .lang-menu .nav-link .icon-globe,

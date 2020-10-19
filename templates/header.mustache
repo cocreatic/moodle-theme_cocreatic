@@ -28,20 +28,20 @@
         </div>
     {{/hasdrawertoggle}}
 
-    <!--a href="{{{ config.wwwroot }}}" class="navbar-brand {{# output.get_logo }}has-logo{{/ output.get_logo }}
-        {{^ output.get_logo }}
+    <a href="{{{ config.wwwroot }}}" class="navbar-brand {{# output.get_compact_logo_url }}has-logo{{/ output.get_compact_logo_url }}
+        {{^ output.get_compact_logo_url }}
             d-none d-sm-inline
-        {{/ output.get_logo }}
+        {{/ output.get_compact_logo_url }}
             ">
-        {{# output.get_logo }}
+        {{# output.get_compact_logo_url }}
             <span class="logo d-none d-sm-inline">
-                <img src="{{output.get_logo}}" alt="{{sitename}}">
+                <img src="{{output.get_compact_logo_url}}" alt="{{sitename}}">
             </span>
-        {{/ output.get_logo }}
-        {{^ output.get_logo }}
+        {{/ output.get_compact_logo_url }}
+        {{^ output.get_compact_logo_url }}
             <span class="site-name d-none d-md-inline">{{{ sitename }}}</span>
-        {{/ output.get_logo }}
-    </a-->
+        {{/ output.get_compact_logo_url }}
+    </a>
 
     <ul class="nav navbar-nav ml-auto">
 
