@@ -177,6 +177,24 @@
                     {{{cookieshelpiconformatted}}}
                 </div>
 
+                {{#hasidentityproviders}}
+                    <div>
+                        <h3 class="m-t-1">{{#str}} potentialidps, auth {{/str}}</h3>
+                        <div class="potentialidplist" class="m-t-1">
+                            {{#identityproviders}}
+                                <div class="potentialidp">
+                                    <a href="{{{url}}}" title={{#quote}}{{name}}{{/quote}} class="btn btn-secondary">
+                                        {{#iconurl}}
+                                            <img src="{{iconurl}}" alt="" width="24" height="24"/>
+                                        {{/iconurl}}
+                                        {{name}}
+                                    </a>
+                                </div>
+                            {{/identityproviders}}
+                        </div>
+                    </div>
+                {{/hasidentityproviders}}
+
                 {{#canloginasguest}}
                     <div class="m-t-2">
                         <p><i class="fa fa-user-circle-o"></i> {{#str}}someallowguest{{/str}}</p>
@@ -187,22 +205,6 @@
                         </form>
                     </div>
                 {{/canloginasguest}}
-
-                {{#hasidentityproviders}}
-                    <h3 class="m-t-1">{{#str}} potentialidps, auth {{/str}}</h3>
-                    <div class="potentialidplist" class="m-t-1">
-                        {{#identityproviders}}
-                            <div class="potentialidp">
-                                <a href="{{{url}}}" title={{#quote}}{{name}}{{/quote}} class="btn btn-secondary">
-                                    {{#iconurl}}
-                                        <img src="{{iconurl}}" alt="" width="24" height="24"/>
-                                    {{/iconurl}}
-                                    {{name}}
-                                </a>
-                            </div>
-                        {{/identityproviders}}
-                    </div>
-                {{/hasidentityproviders}}
 
                 {{#cansignup}}
                     <h2>{{#str}}firsttime{{/str}}</h2>
