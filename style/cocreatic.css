@@ -114,6 +114,10 @@ nav.navbar ul.navbar-nav .usermenu {
     text-decoration: none;
 }
 
+#box-news a.one-news:hover {
+    transform: scale(0.9);
+}
+
 #frontpage-available-course-list {
     background-color: #EBF1F4;
     padding-top: 40px;
