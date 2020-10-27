@@ -56,6 +56,12 @@ nav.navbar i.icon, nav.navbar i {
     color: #fff;
 }
 
+nav.navbar .dropdown.show i.icon,
+nav.navbar .dropdown.show i {
+    color: #212529;
+}
+
+
 nav.navbar ul.navbar-nav .lang-menu .nav-link .icon-globe,
 nav.navbar ul.navbar-nav .popover-region .popover-region-toggle i,
 nav.navbar i.icon, nav.navbar i {
